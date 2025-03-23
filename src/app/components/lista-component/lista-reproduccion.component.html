@@ -1,0 +1,13 @@
+<h2>Listas de Reproducción</h2>
+<button routerLink="/add" class="btn btn-primary">Crear Nueva Lista</button>
+
+<ul *ngIf="listas.length > 0; else noListas">
+  <li *ngFor="let lista of listas">
+    <strong>{{ lista.nombre }}</strong> - {{ lista.descripcion }}
+    <button (click)="eliminarLista(lista.nombre)" class="btn btn-danger">Eliminar</button>
+  </li>
+</ul>
+
+<ng-template #noListas>
+  <p>No hay listas de reproducción.</p>
+</ng-template>
