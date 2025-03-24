@@ -5,7 +5,7 @@ import { MusicService } from '../../services/music.service';
 @Component({
   selector: 'app-lista-reproduccion',
   standalone: true,
-  imports: [CommonModule], // 🔹 Importar CommonModule para *ngFor
+  imports: [CommonModule],
   templateUrl: './lista-reproduccion.component.html',
   styleUrls: ['./lista-reproduccion.component.scss']
 })
